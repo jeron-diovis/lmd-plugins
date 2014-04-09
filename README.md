@@ -25,9 +25,9 @@ require('../../parentModule');
 However, probably, most projects use this approach, aren't they?
  
 ##### Options:
- * log: boolean
-Set to true to enable logging a tree of 'require' calls. 
-It uses browser's ```console.group``` / ```console.groupEnd``` methods, and will be silently disabled if these methods are absent.
+  Option | Values | Description
+  ------ | ------ | ------
+  log | boolean | Set to true to enable logging a tree of 'require' calls. It uses browser's ```console.group``` / ```console.groupEnd``` methods, and will be silently disabled if these methods are absent.
 
 ##### Features:
  * Single dot at the beginning is always allowed. On root level it is just skipped.
