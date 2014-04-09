@@ -5,7 +5,7 @@ Some simple plugins for LMD loader
 
 # List of plugins
 
-* #### Relative paths
+### Relative paths
   Relative paths support like in RequireJS
 ```JavaScript
 require('./siblingModule');
@@ -20,12 +20,13 @@ require('../../parentModule');
 }
 ```
 However, probably, most projects use this approach, aren't they?
- #####Options:
+ 
+##### Options:
  * log: boolean
 Set to true to enable logging a tree of 'require' calls. 
 It uses browser's ```console.group``` / ```console.groupEnd``` methods, and will be silently disabled if these methods are absent.
 
- #####Features:
+##### Features:
  * Single dot at the beginning is always allowed. On root level it is just skipped.
  * Mixing and splitting relative paths is not allowed. After all, normally it is unlikely you will need to write something like this:
 ```JavaScript 
@@ -36,12 +37,12 @@ It's because LMD itself does not reacts anyhow if you require unexisting module 
 So, just ```undefined``` will be returned in this case.
 If you don't like this, next plugin is for you.
 
-
-* ####"Strict" require
+===
+### "Strict" require
 Overrides default LMD behavior, by modifying "require" function so it throws exception if required module was not found. Just like RequireJS.
 **NOTE**, 'not found' means 'returns undefined', so if you explicitly assign ```module.exports = undefined``` - you will get an exception.
 
-#####Features:
+##### Features:
  * when combined with "relative paths" plugin, this plugin will show additional error details when your relative path leads outside of file tree:
 ```Javascript
 Uncaught Error: Module '../../../unexisting' is undefined!
@@ -49,12 +50,12 @@ Called 'require("../../../unexisting")' from 'packages/test/main'
 ```
 It is done to simplify further debugging.
 
-
-* ####Expose require
+===
+### Expose require
 This plugin just exports 'require' function to global scope.
 It contradicts with origin LMD approach, and you definitely should not use it in production build. But for developing and debugging it can very useful.
 
-#####Features:
+##### Features:
  * if you also use some of plugins above, be sure that you place this plugin the last in plugins list in your LMD config:
 ```JavaScript 
 { 
