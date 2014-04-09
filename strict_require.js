@@ -8,7 +8,7 @@
 
     // is some another plugin suddenly exposes this useful info, use it
     if (sb.parentModule) {
-      err += "\nCalled 'require(" + moduleName + ")' from '" + sb.parentModule + "'";
+      err += "\nCalled 'require(\"" + moduleName + "\")' from '" + sb.parentModule + "'";
     }
 
     if (module === undefined) {
