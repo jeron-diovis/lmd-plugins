@@ -13,6 +13,7 @@ Read [this page](https://github.com/azproduction/lmd/wiki/User-made-plugins) to 
 require('./siblingModule');
 require('../../parentModule');
 ```
+
 **NOTE**, that it will work only if your modules names repeats files tree structure. That is, you should configure your modules like this:
 ```JavaScript
 {
@@ -42,6 +43,7 @@ If you don't like this, next plugin is for you.
 ===
 ### "Strict" require
 Overrides default LMD behavior, by modifying "require" function so it throws exception if required module was not found. Just like RequireJS.
+
 **NOTE**, 'not found' means 'returns undefined', so if you explicitly assign ```module.exports = undefined``` - you will get an exception.
 
 ##### Features:
