@@ -20,11 +20,12 @@
       parentParts = parent.split('/'),
       stepsUpside = 0,
       isRelative = false,
-      opts = sb.options.relative_paths || {};
+      opts = sb.options.relative_paths || {},
+      isLoggingEnabled = opts.log && global.console && global.console.group;
 
     path.push(moduleName);
 
-    if (opts.log) {
+    if (isLoggingEnabled) {
       var logGroup = 'Require ' + moduleName + ' from ' + parent;
       console.group(logGroup);
     }
@@ -55,7 +56,7 @@
 
     path.pop();
 
-    if (opts.log) {
+    if (isLoggingEnabled) {
       console.groupEnd(logGroup);
     }
 
