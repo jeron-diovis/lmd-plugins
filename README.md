@@ -57,7 +57,7 @@ It is done to simplify further debugging.
 ===
 ### Expose require
 This plugin just exports 'require' function to global scope.
-It contradicts with origin LMD approach, and you definitely should not use it in production build. But for developing and debugging it can very useful.
+It contradicts with origin LMD approach, and you definitely should not use it in production build. But for developing and debugging it can be very useful.
 
 ##### Features:
  * if you also use some of plugins above, be sure that you place this plugin the last in plugins list in your LMD config:
