@@ -3,6 +3,8 @@ lmd-plugins
 
 Some simple plugins for LMD loader
 
+Read [this page](https://github.com/azproduction/lmd/wiki/User-made-plugins) to learn how to install and configure plugins.
+
 # List of plugins
 
 ### Relative paths
